@@ -18,7 +18,7 @@
   
     <nav class="px-20 py-5 fixed top-0 w-full duration-300 z-10" id="Navbar">
       <div class="flex justify-between items-center">
-        <p class="text-white text-xl font-montserrat font-semibold">Akhmad Alvan Hani</p>
+        <p class="text-white text-xl font-montserrat font-semibold">Rouzok</p>
         <p class="text-white" id="demo"></p>
 
         <!-- <ul class="flex gap-4 text-lg font-montserrat font-semibold text-white/5">
@@ -75,20 +75,23 @@
   
     <!-- Jumbotron Start -->
   
-    <section class="jumbotron" id="home">
+    <section class="jumbotron relative" id="home">
       <div class="pt-32 pb-10">
         <div class="flex justify-center gap-24">
           <!-- <div class="absolute Z-[3] -left-1/2 top-0 w-1/2 h-1/2 rounded-full white__gradient"></div> -->
           <!-- <div class="absolute Z-[0] -left-1/2 top-0 w-1/2 h-1/2 rounded-full blue__gradient"></div> -->
-          <div class="font-montserrat flex flex-col text-white justify-center gap-4 w-1/2">
-            <h5 class="text-sm text-white/70 uppercase " style="letter-spacing: 0.4em;">akhmad alvan hani</h5>
-            <h1 class="text-6xl font-semibold -ml-1">Fullstack web developer</h1>
-            <h3 class="text-xl text-white/60 leading-8 font-semibold w-11/12">A full-stack web developer with 15 years of age and one year of experience, I've worked on many projects with several programming languages ​​and frameworks.</h3>
-            <div class="flex gap-5 text-white/60 items-end">
-              <a class="hover:cursor-pointer text-white hover:text-white duration-300 font-semibold text-lg group" onclick="about()" id="btn-about">Read About Me <hr class="opacity-0 group-hover:opacity-100 duration-300 bg-white"/></a>
-              <span>or</span>
-              <a class="hover:cursor-pointer text-white hover:text-white duration-300 font-semibold text-lg group" onclick="about()" id="btn-about">View Projects <hr class="opacity-0 group-hover:opacity-100 duration-300 bg-white"></a>
+          <div class="font-montserrat flex flex-col text-white justify-center gap-3 w-7/12">
+            <div class="flex flex-col mb-1">
+              <h5 class="text-7xl uppercase ">akhmad alvan hani</h5>
+              <h1 class="text-lg font-semibold text-white/70">Fullstack web developer</h1>
             </div>
+            <h3 class="text-2xl text-white/70 leading-8 font-semibold w-11/12">A full-stack web developer with 15 years of age and one year of experience, I've worked on many projects with several programming languages ​​and frameworks.</h3>
+            <button class="flex items-center group gap-2 self-start border-2 border-transparent rounded-lg px-2 py-2 text-white/70 cursor-pointer hover:bg-white/20 hover:text-white hover:border-white/5 duration-300 transition-colors" onclick="projects()">
+              <span class="font-semibold">My Projects</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-6 group-hover:translate-x-1.5 duration-300 transition-transform">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+              </svg>
+            </button>
           </div>
           <img src="assets/images/Rouzok.jpeg" alt="" width="300px" class="rounded-full shadow">
         </div>
@@ -108,6 +111,34 @@
            <li></li>
         </ul>
      </div> -->
+
+     <button class="absolute left-1/2 bottom-1/4" onclick="about()">
+      <svg
+        class="block w-6 h-10 my-auto self-center"
+        viewBox="0 0 14 26"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          id="wheel"
+          d="M7 6V11"
+          stroke="#F3F4F6"
+          strokeMiterlimit="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          class="transition-transform"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M13 8.35391C13 4.29515 10.3115 1 7.00003 1C3.6885 1 1 4.29515 1 8.35391V17.6461C1 21.7049 3.6885 25 7.00003 25C10.3115 25 13 21.7049 13 17.6461V8.35391V8.35391Z"
+          stroke="#F3F4F6"
+          strokeMiterlimit="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </button>
       <!-- wave -->
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path class="fill-[#090f14]" fill-opacity="1" d="M0,160L34.3,149.3C68.6,139,137,117,206,122.7C274.3,128,343,160,411,181.3C480,203,549,213,617,213.3C685.7,213,754,203,823,176C891.4,149,960,107,1029,90.7C1097.1,75,1166,85,1234,112C1302.9,139,1371,181,1406,202.7L1440,224L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
@@ -124,9 +155,7 @@
     <section class="bg-[#090f14]">
       <div class="text-white" id="about" style="font-family: Fredoka,sans-serif">
   
-        <div class="text-center mb-3">
-            <h1 class="text-5xl">About Me</h1>
-        </div>
+        <h1 class=" text-center mb-5 text-6xl">About Me</h1>
         <div class="flex justify-center mx-">
           <div class="w-96">
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore aspernatur minima numquam consequatur optio, aperiam sit sequi fugiat dolore velit.</p>
@@ -153,13 +182,13 @@
           </path>
         </svg>
       <!-- Wave -->
-
+      
       <div class=" tag -mt-16" id="project">
-        <h1 class="text-center text-white mb-16 text-5xl">My Projects</h1>
+          <h1 class=" text-6xl text-center text-white mb-16">My Projects</h1>
 
         <div class="flex justify-center items-center gap-10">
           <!-- project 1 -->
-          <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30 w-[30rem] h-[30rem]  rounded-lg">
+          <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30 w-[30rem] h-[30rem]  rounded-md">
             <div class="h-full w-full group-hover:scale-110 duration-300">
               <img class="h-fit w-fit object-cover transition-transform duration-500 " src="assets/images/project1.png" alt="" />
               <img class="h-fit w-fit object-cover transition-transform duration-500" src="assets/images/project1.png" alt="" />
@@ -215,8 +244,15 @@
   </section>
   
     <!-- End Footer -->
-    
-    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.js"
+      integrity="sha512-qk0XupXlge1h9I63+bC7K8850xgWnUjTgSNkfLnsqc7dWdx4031UbKjKs2cuRxsNXymkSjyzSCiryVouU74zkg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      let rellax = new Rellax('.rellax');
+    </script>
     <script src="https://kit.fontawesome.com/221c7d326d.js" crossorigin="anonymous"></script>
     <script src="index.js"></script>
   </body>

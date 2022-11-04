@@ -30,6 +30,10 @@ html {
   animation-duration: 1s;
 }
 
+svg path.transition-transform {
+  animation: mouseWheel 1.5s ease infinite;
+}
+
 .jumbotron {
   background: var(--main-bg-color);
 }
@@ -59,6 +63,18 @@ html {
   }
 
   100% {
+  }
+}
+
+@keyframes mouseWheel {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(13%);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 

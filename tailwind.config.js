@@ -1,10 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./**/*.{html,js}'],
+  content: ['./*.{html,js}'],
   theme: {
     extend: {
       fontFamily: {
-        montserrat: ['Montserrat'],
+        sans: ['Montserrat'],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

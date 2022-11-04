@@ -76,6 +76,7 @@ function navActive() {
   const btnproject = document.getElementById('btn-projects');
   const btncontact = document.getElementById('btn-contact');
   const elementop = document.documentElement.scrollTop;
+  const headerAbout = document.getElementById('headerAbout');
 
   if (elementop > 0) {
     navbar.classList.add('bg-gray-900/80');
