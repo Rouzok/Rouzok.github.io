@@ -309,27 +309,64 @@ function cariY() {
 }
 
 function viewMenu() {
-  const viewMenu = document.getElementById('menu');
+  const viewMenu = document.getElementById('indexMenu');
   const Navbar2 = document.getElementById('Navbar2');
+  const burgerMenu1 = document.getElementById('burgerMenu1');
+  const burgerMenu2 = document.getElementById('burgerMenu2');
+  const burgerMenu3 = document.getElementById('burgerMenu3');
 
   function showMenu() {
     Navbar2.classList.toggle('-z-10');
     Navbar2.classList.toggle('z-20');
     Navbar2.classList.toggle('opacity-0');
-    viewMenu.classList.add('opacity-0');
+    viewMenu.classList.toggle('z-50');
+
+    burgerMenu2.classList.toggle('opacity-0');
+    burgerMenu1.classList.toggle('rotate-45');
+    burgerMenu1.classList.toggle('translate-y-[9.5px]');
+    burgerMenu1.classList.toggle('translate-x-0');
+    burgerMenu3.classList.toggle('-rotate-45');
+    burgerMenu3.classList.toggle('-translate-y-2');
+    burgerMenu3.classList.toggle('translate-x-0');
+  }
+  function openAnim() {
+    burgerMenu1.classList.toggle('w-6');
+    burgerMenu1.classList.toggle('w-7');
+    burgerMenu3.classList.toggle('w-6');
+    burgerMenu3.classList.toggle('w-7');
+    burgerMenu1.classList.toggle('group-hover:-translate-y-1');
+    burgerMenu3.classList.toggle('group-hover:translate-y-1');
   }
 
   function closeMenu() {
     Navbar2.classList.toggle('-z-10');
     Navbar2.classList.toggle('z-20');
     Navbar2.classList.toggle('opacity-0');
-    viewMenu.classList.remove('opacity-0');
+
+    burgerMenu2.classList.toggle('opacity-0');
+    burgerMenu1.classList.toggle('rotate-45');
+    burgerMenu1.classList.toggle('translate-y-[9.5px]');
+    burgerMenu1.classList.toggle('translate-x-0');
+    burgerMenu3.classList.toggle('-rotate-45');
+    burgerMenu3.classList.toggle('-translate-y-2');
+    burgerMenu3.classList.toggle('translate-x-0');
+  }
+
+  function closeAnim() {
+    burgerMenu1.classList.toggle('w-6');
+    burgerMenu1.classList.toggle('w-7');
+    burgerMenu3.classList.toggle('w-6');
+    burgerMenu3.classList.toggle('w-7');
+    burgerMenu1.classList.toggle('group-hover:-translate-y-1');
+    burgerMenu3.classList.toggle('group-hover:translate-y-1');
   }
 
   if (Navbar2.classList.contains('-z-10') && Navbar2.classList.contains('opacity-0')) {
+    closeAnim();
     showMenu();
   } else {
-    Navbar2.closeMenu();
+    openAnim();
+    closeMenu();
   }
 
   Navbar2.onclick = function () {

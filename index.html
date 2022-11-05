@@ -19,48 +19,21 @@
     <nav class="px-20 py-5 fixed top-0 w-full duration-300 z-10" id="Navbar">
       <div class="flex justify-between items-center">
         <p class="text-white text-xl font-montserrat font-semibold">Rouzok</p>
-        <p class="text-white" id="demo"></p>
-
-        <!-- <ul class="flex gap-4 text-lg font-montserrat font-semibold text-white/5">
-           <li class="">
-            <a class="hover:cursor-pointer text-gray-400 hover:text-white duration-300" onclick="home()" id="btn-home">Home</a>
-          </li>
-          <li class="">
-            <a class="hover:cursor-pointer text-gray-400/80 hover:text-white duration-300" onclick="about()" id="btn-about">About</a>
-          </li>
-          <li class="">5
-            <a class="hover:cursor-pointer text-gray-400/80 hover:text-white duration-300" onclick="projects()" id="btn-projects">Projects</a>
-          </li>
-          <li class="">
-            <a class="hover:cursor-pointer text-gray-400/80 hover:text-white duration-300" onclick="contact()" id="btn-contact">Contact</a>
-          </li>
-        </ul> -->
-        <a class="hover:cursor-pointer duration-300 hover:opacity-60 rounded-full px-1 py-1 flex gap-2 justify-center items-center group" id="menu" onclick="viewMenu()">
-          <span class="text-white font-montserrat text-xs tracking-widest font-semibold">MENU</span>
-          <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-7 h-7">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-          </svg> -->
-            <div class="inline-block ">
-              <div class="w-5 h-[2px] bg-white duration-200 my-1.5 group-hover:rotate-180 group-hover:-translate-y-0.5"></div>
-              <div class="w-5 h-[2px] bg-white duration-200 my-1.5 group-hover:rotate-180 group-hover:-translate-y-0 delay-75"></div>
-              <div class="w-5 h-[2px] bg-white duration-200 my-1.5 group-hover:rotate-180 group-hover:translate-y-0.5 delay-150"></div>
-            </div>
-          
-        </a>
-        
-
+        <p class="text-white absolute left-1/2" id="demo"></p>
       </div>
     
     </nav>
+    <a class="hover:cursor-pointer duration-300 hover:opacity-60 rounded-full flex gap-2 justify-center items-center group fixed right-20 top-[18px] z-[25]" id="indexMenu" onclick="viewMenu()">
+      <span class="text-white font-montserrat text-xs tracking-widest font-semibold">MENU</span>
+        <button>
+          <span class="block w-6 h-[0.2rem] bg-white duration-200 my-1.5 group-hover:-translate-y-1 " id="burgerMenu1"></span>
+          <span class="block w-5 h-[0.15rem] bg-white duration-300 my-1.5" id="burgerMenu2"></span>
+          <span class="block w-6 h-[0.2rem] bg-white duration-200 my-1.5 group-hover:translate-y-1" id="burgerMenu3"></span>
+        </button>
+      
+    </a>
 
     <nav class="fixed bg-black bg-opacity-95 backdrop-blur-sm -z-10 text-3xl font-montserrat font-semibold opacity-0 duration-300" id="Navbar2">
-      <!-- z-[-5] opacity-100 -->
-      <a class="hover:cursor-pointer absolute top-[1.4rem] right-[6.05rem] px-1 py-1 duration-300 hover:bg-white/20 rounded-full hover:rotate-90" id="menu" onclick="viewMenu()">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-7 h-7">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-        
-      </a>
       <div class="flex flex-col justify-center items-center h-screen w-screen gap-5">
         <a class="hover:cursor-pointer text-white hover:text-white/50 duration-300" onclick="home()">Home</a>
         <a class="hover:cursor-pointer text-white hover:text-white/50 duration-300" onclick="about()" >About</a>
