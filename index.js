@@ -305,12 +305,13 @@ function contact() {
 
 function cariY() {
   let y = document.documentElement.scrollTop;
-  document.getElementById('demo').innerHTML = 'Horizontally: ' + y;
+  document.getElementById('demo').innerHTML = 'Vertically: ' + y;
 }
 
 function viewMenu() {
-  const viewMenu = document.getElementById('indexMenu');
   const Navbar2 = document.getElementById('Navbar2');
+  const menuButton = document.getElementById('indexMenu');
+  const menuText = document.getElementById('menuText');
   const burgerMenu1 = document.getElementById('burgerMenu1');
   const burgerMenu2 = document.getElementById('burgerMenu2');
   const burgerMenu3 = document.getElementById('burgerMenu3');
@@ -319,14 +320,13 @@ function viewMenu() {
     Navbar2.classList.toggle('-z-10');
     Navbar2.classList.toggle('z-20');
     Navbar2.classList.toggle('opacity-0');
-    viewMenu.classList.toggle('z-50');
 
     burgerMenu2.classList.toggle('opacity-0');
     burgerMenu1.classList.toggle('rotate-45');
-    burgerMenu1.classList.toggle('translate-y-[9.5px]');
+    burgerMenu1.classList.toggle('translate-y-[0.55rem]');
     burgerMenu1.classList.toggle('translate-x-0');
     burgerMenu3.classList.toggle('-rotate-45');
-    burgerMenu3.classList.toggle('-translate-y-2');
+    burgerMenu3.classList.toggle('-translate-y-[0.55rem]');
     burgerMenu3.classList.toggle('translate-x-0');
   }
   function openAnim() {
@@ -336,6 +336,8 @@ function viewMenu() {
     burgerMenu3.classList.toggle('w-7');
     burgerMenu1.classList.toggle('group-hover:-translate-y-1');
     burgerMenu3.classList.toggle('group-hover:translate-y-1');
+    menuButton.classList.toggle('group-hover:rotate-90');
+    menuText.innerHTML = 'MENU';
   }
 
   function closeMenu() {
@@ -345,10 +347,10 @@ function viewMenu() {
 
     burgerMenu2.classList.toggle('opacity-0');
     burgerMenu1.classList.toggle('rotate-45');
-    burgerMenu1.classList.toggle('translate-y-[9.5px]');
+    burgerMenu1.classList.toggle('translate-y-[0.55rem]');
     burgerMenu1.classList.toggle('translate-x-0');
     burgerMenu3.classList.toggle('-rotate-45');
-    burgerMenu3.classList.toggle('-translate-y-2');
+    burgerMenu3.classList.toggle('-translate-y-[0.55rem]');
     burgerMenu3.classList.toggle('translate-x-0');
   }
 
@@ -359,6 +361,11 @@ function viewMenu() {
     burgerMenu3.classList.toggle('w-7');
     burgerMenu1.classList.toggle('group-hover:-translate-y-1');
     burgerMenu3.classList.toggle('group-hover:translate-y-1');
+    setTimeout(function () {
+      menuButton.classList.toggle('group-hover:rotate-90');
+    }, 400);
+
+    menuText.innerHTML = 'CLOSE';
   }
 
   if (Navbar2.classList.contains('-z-10') && Navbar2.classList.contains('opacity-0')) {
@@ -370,6 +377,7 @@ function viewMenu() {
   }
 
   Navbar2.onclick = function () {
+    openAnim();
     closeMenu();
   };
 }

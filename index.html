@@ -16,22 +16,20 @@
    
     <!-- Navbar -->
   
-    <nav class="px-20 py-5 fixed top-0 w-full duration-300 z-10" id="Navbar">
-      <div class="flex justify-between items-center">
-        <p class="text-white text-xl font-montserrat font-semibold">Rouzok</p>
-        <p class="text-white absolute left-1/2" id="demo"></p>
-      </div>
-    
+    <nav class="px-20 py-5 fixed top-0 w-full duration-300 z-10 flex justify-center" id="Navbar">
+      <p class="text-white left-1/2" id="demo"></p>
+      <span class="opacity-0">Navbar</span>
     </nav>
-    <a class="hover:cursor-pointer duration-300 hover:opacity-60 rounded-full flex gap-2 justify-center items-center group fixed right-20 top-[18px] z-[25]" id="indexMenu" onclick="viewMenu()">
-      <span class="text-white font-montserrat text-xs tracking-widest font-semibold">MENU</span>
-        <button>
+
+      <p class="text-white text-xl font-montserrat font-semibold fixed left-20 top-[18px] z-[25]">Rouzok</p>
+      <a class="hover:cursor-pointer duration-300 hover:opacity-60 rounded-full flex gap-2 justify-center items-center group fixed right-20 top-[18px] z-[25]"  onclick="viewMenu()">
+        <span class="text-white font-montserrat text-xs tracking-widest font-semibold" id="menuText">MENU</span>
+        <button id="indexMenu" class="duration-300">
           <span class="block w-6 h-[0.2rem] bg-white duration-200 my-1.5 group-hover:-translate-y-1 " id="burgerMenu1"></span>
           <span class="block w-6 h-[0.15rem] bg-white duration-300 my-1.5" id="burgerMenu2"></span>
           <span class="block w-6 h-[0.2rem] bg-white duration-200 my-1.5 group-hover:translate-y-1" id="burgerMenu3"></span>
         </button>
-      
-    </a>
+      </a>
 
     <nav class="fixed bg-black bg-opacity-95 backdrop-blur-sm -z-10 text-3xl font-montserrat font-semibold opacity-0 duration-300" id="Navbar2">
       <div class="flex flex-col justify-center items-center h-screen w-screen gap-5">
