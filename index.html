@@ -31,12 +31,22 @@
         </button>
       </a>
 
-    <nav class="fixed bg-black bg-opacity-95 backdrop-blur-sm -z-10 text-3xl font-montserrat font-semibold opacity-0 duration-300" id="Navbar2">
-      <div class="flex flex-col justify-center items-center h-screen w-screen gap-5">
-        <a class="hover:cursor-pointer text-white hover:text-white/50 duration-300" onclick="home()">Home</a>
-        <a class="hover:cursor-pointer text-white hover:text-white/50 duration-300" onclick="about()" >About</a>
-        <a class="hover:cursor-pointer text-white hover:text-white/50 duration-300" onclick="projects()">Projects</a>
-        <a class="hover:cursor-pointer text-white hover:text-white/50 duration-300" onclick="contact()" >Contact</a>
+    <nav class="fixed bg-black bg-opacity-95 backdrop-blur-sm -z-10 font-montserrat font-semibold opacity-0 duration-300" id="Navbar2">
+      <div class="fixed left-1/2 -translate-x-44 text-white top-[16.35rem] duration-500 ease-in-out" id="arrowMenu">
+        <!-- top-[16.35rem] home
+             top-[20.6rem] about
+             top-[24.85rem] projects
+             top-[29.1rem] contact me -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-9 h-9">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+        </svg>
+      </div>
+      <div class="flex flex-col justify-center items-center h-screen w-screen gap-5 text-5xl">
+        <h1 class="text-sm text-white/70 font-normal tracking-widest">MENU</h1>
+        <a class="hover:cursor-pointer text-white hover:text-white/90 duration-300" onclick="home()" id="btn-home">Home</a>
+        <a class="hover:cursor-pointer text-white/60 hover:text-white/90 duration-300" onclick="about()" id="btn-about">About</a>
+        <a class="hover:cursor-pointer text-white/60 hover:text-white/90 duration-300" onclick="projects()" id="btn-projects">Projects</a>
+        <a class="hover:cursor-pointer text-white/60 hover:text-white/90 duration-300" onclick="contact()" id="btn-contact">Contact</a>
       </div>
         
       
@@ -154,7 +164,7 @@
         </svg>
       <!-- Wave -->
       
-      <div class=" tag -mt-16" id="project">
+      <div class=" tag -mt-16" id="projects">
           <h1 class=" text-6xl text-center text-white mb-16">My Projects</h1>
 
         <div class="flex justify-center items-center gap-10">
@@ -184,8 +194,8 @@
   
     <!-- Contact -->
   
-    <section class="bg-[#090f14]">
-      <div class="tag text-white" id="contact">
+    <section class="bg-[#090f14]" id="contact">
+      <div class="tag text-white">
         <h1 class="text-center font-montserrat font-semibold text-5xl mb-16">Contact Me</h1>
         <div class="flex justify-evenly items-center">
           <a href="mailto:paramakhluk@gmail.com?subject=subject" class="text-4xl font-montserrat py-1 hover:text-white/70 duration-300 transition-colors ">paramakhluk@gmail.com</a>
