@@ -63,9 +63,8 @@ window.onload = function () {
 };
 
 window.onscroll = function () {
-  progresBar();
   navActive();
-  cariY();
+  handleScroll();
 };
 
 function navActive() {
@@ -151,147 +150,51 @@ function navActive() {
   }
 }
 
-function progresBar() {
-  var elementop = document.documentElement.scrollTop;
-
-  if (elementop > 1093 && elementop < 1772) {
-    //1
-    var progjs = document.querySelectorAll('.bar1');
-    for (var i = 0; i < progjs.length; i++) {
-      switch (i) {
-        case 0:
-          progjs[i].style.width = '73%';
-          progjs[i].style.transition = '1.2s';
-          break;
-        case 1:
-          progjs[i].style.width = '27%';
-          progjs[i].style.transition = '1.2s';
-          break;
-        case 2:
-          progjs[i].style.width = '1%';
-          progjs[i].style.transition = '1.2s';
-          break;
-      }
-    }
-
-    //2
-    var progjs2 = document.querySelectorAll('.bar2');
-    for (var i = 0; i < progjs2.length; i++) {
-      switch (i) {
-        case 0:
-          progjs2[i].style.width = '73%';
-          progjs2[i].style.transition = '1.2s';
-          break;
-        case 1:
-          progjs2[i].style.width = '27%';
-          progjs2[i].style.transition = '1.2s';
-          break;
-        case 2:
-          progjs2[i].style.width = '1%';
-          progjs2[i].style.transition = '1.2s';
-          break;
-      }
-    }
-    //3
-    var progjs3 = document.querySelectorAll('.bar3');
-    for (var i = 0; i < progjs3.length; i++) {
-      switch (i) {
-        case 0:
-          progjs3[i].style.width = '73%';
-          progjs3[i].style.transition = '1.2s';
-          break;
-        case 1:
-          progjs3[i].style.width = '27%';
-          progjs3[i].style.transition = '1.2s';
-          break;
-        case 2:
-          progjs3[i].style.width = '1%';
-          progjs3[i].style.transition = '1.2s';
-          break;
-      }
-    }
+function handleScroll() {
+  const buttonToTop = document.getElementById('buttonToTop');
+  if (document.documentElement.scrollTop > 574) {
+    buttonToTop.classList.add('visible');
   } else {
-    //1
-    var progjs = document.querySelectorAll('.bar1');
-    for (var i = 0; i < progjs.length; i++) {
-      switch (i) {
-        case 0:
-          progjs[i].style.transition = '0s';
-          progjs[i].style.width = '0%';
-          break;
-        case 1:
-          progjs[i].style.transition = '0s';
-          progjs[i].style.width = '0%';
-          break;
-        case 2:
-          progjs[i].style.transition = '0s';
-          progjs[i].style.width = '0%';
-          break;
-      }
-    }
-    //2
-    var progjs2 = document.querySelectorAll('.bar2');
-    for (var i = 0; i < progjs2.length; i++) {
-      switch (i) {
-        case 0:
-          progjs2[i].style.transition = '0s';
-          progjs2[i].style.width = '0%';
-          break;
-        case 1:
-          progjs2[i].style.transition = '0s';
-          progjs2[i].style.width = '0%';
-          break;
-        case 2:
-          progjs2[i].style.transition = '0s';
-          progjs2[i].style.width = '0%';
-          break;
-      }
-    }
-    //3
-    var progjs3 = document.querySelectorAll('.bar3');
-    for (var i = 0; i < progjs3.length; i++) {
-      switch (i) {
-        case 0:
-          progjs3[i].style.transition = '0s';
-          progjs3[i].style.width = '0%';
-          break;
-        case 1:
-          progjs3[i].style.transition = '0s';
-          progjs3[i].style.width = '0%';
-          break;
-        case 2:
-          progjs3[i].style.transition = '0s';
-          progjs3[i].style.width = '0%';
-          break;
-      }
-    }
+    buttonToTop.classList.remove('visible');
   }
 }
 
 function home() {
-  const homeTop = document.getElementById('home');
-  document.documentElement.scrollTop = homeTop.offsetTop;
+  const homeTop = document.getElementById('home').offsetTop;
+  document.documentElement.scrollTo({
+    top: homeTop,
+    behavior: 'smooth',
+  });
 }
 
 function about() {
-  const aboutTop = document.getElementById('about');
-  document.documentElement.scrollTop = aboutTop.offsetTop - 100;
+  const aboutTop = document.getElementById('about').offsetTop;
+  document.documentElement.scrollTo({
+    top: aboutTop - 100,
+    behavior: 'smooth',
+  });
 }
 
 function projects() {
-  const projectsTop = document.getElementById('projects');
-  document.documentElement.scrollTop = projectsTop.offsetTop - 100;
+  const projectsTop = document.getElementById('projects').offsetTop;
+  document.documentElement.scrollTo({
+    top: projectsTop - 100,
+    behavior: 'smooth',
+  });
 }
 
 function contact() {
-  const contactTop = document.getElementById('contact');
-  document.documentElement.scrollTop = contactTop.offsetTop - 100;
+  const contactTop = document.getElementById('contact').offsetTop;
+  document.documentElement.scrollTo({
+    top: contactTop - 100,
+    behavior: 'smooth',
+  });
 }
 
-function cariY() {
-  let y = document.documentElement.scrollTop;
-  document.getElementById('demo').innerHTML = 'Vertically: ' + y;
-}
+// function cariY() {
+//   let y = document.documentElement.scrollTop;
+//   document.getElementById('demo').innerHTML = 'Vertically: ' + y;
+// }
 
 function viewMenu() {
   const Navbar2 = document.getElementById('Navbar2');

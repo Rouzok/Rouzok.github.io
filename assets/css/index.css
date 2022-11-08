@@ -1,14 +1,10 @@
-html {
+body {
   scroll-behavior: smooth;
 }
 :root {
   --reverse-main-bg: radial-gradient(ellipse at top, #1b2735 0%, #090a0f 100%);
   --main-bg-color: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   --main-nav: radial-gradient(ellipse at bottom, #1b2735 0%, #0c0d15 100%);
-}
-
-.active {
-  color: white;
 }
 
 .pink__gradient {
@@ -22,12 +18,6 @@ html {
 .blue__gradient {
   background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
   filter: blur(123px);
-}
-.navbar-brand {
-  animation-delay: 300s;
-  animation: BackInLeft;
-  background: transparent;
-  animation-duration: 1s;
 }
 
 svg path.transition-transform {
@@ -44,6 +34,21 @@ svg path.transition-transform {
 
 .footer {
   background: var(--main-bg-color);
+}
+
+.fadeFromTop {
+  opacity: 0;
+  transform: translateY(-25%);
+}
+
+.fadeFromTop.visible {
+  opacity: 40%;
+  transform: translateY(0);
+  animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+}
+
+.fadeFromTop.visible:hover {
+  opacity: 100%;
 }
 
 @keyframes FadeInFromBottom {

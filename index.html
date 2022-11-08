@@ -17,7 +17,7 @@
     <!-- Navbar -->
   
     <nav class="px-20 py-5 fixed top-0 w-full duration-300 z-10 flex justify-center" id="Navbar">
-      <p class="text-white left-1/2" id="demo"></p>
+      <!-- <p class="text-white left-1/2" id="demo"></p> -->
       <span class="opacity-0">Navbar</span>
     </nav>
 
@@ -31,18 +31,14 @@
         </button>
       </a>
 
-    <nav class="fixed bg-black bg-opacity-95 backdrop-blur-sm -z-10 font-montserrat font-semibold opacity-0 duration-300" id="Navbar2">
-      <div class="fixed left-1/2 -translate-x-44 text-white top-[16.35rem] duration-500 ease-in-out" id="arrowMenu">
-        <!-- top-[16.35rem] home
-             top-[20.6rem] about
-             top-[24.85rem] projects
-             top-[29.1rem] contact me -->
+    <nav class="fixed bg-black bg-opacity-70 backdrop-blur-md -z-10 font-montserrat font-semibold opacity-0 duration-300" id="Navbar2">
+      <div class="fixed left-1/2 -translate-x-44 text-white top-[16.35rem] duration-300 ease-in-out" id="arrowMenu">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-9 h-9">
           <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
         </svg>
       </div>
       <div class="flex flex-col justify-center items-center h-screen w-screen gap-5 text-5xl">
-        <h1 class="text-sm text-white/70 font-normal tracking-widest">MENU</h1>
+        <h1 class="text-sm text-white/60 font-normal tracking-widest">MENU</h1>
         <a class="hover:cursor-pointer text-white hover:text-white/90 duration-300" onclick="home()" id="btn-home">Home</a>
         <a class="hover:cursor-pointer text-white/60 hover:text-white/90 duration-300" onclick="about()" id="btn-about">About</a>
         <a class="hover:cursor-pointer text-white/60 hover:text-white/90 duration-300" onclick="projects()" id="btn-projects">Projects</a>
@@ -51,12 +47,17 @@
         
       
     </nav>
-  
+
+    <button class="fixed text-white font-semibold bottom-10 right-10 rounded-full p-3 bg-gray-800 z-10 duration-300 fadeFromTop" onclick="home()" id="buttonToTop">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18" />
+      </svg>
+    </button>
     <!-- End Navbar -->
   
     <!-- Jumbotron Start -->
   
-    <section class="jumbotron relative" id="home">
+    <section class="jumbotron relative overscroll-contain overscroll-y-contain" id="home">
       <div class="pt-32 pb-10">
         <div class="flex justify-center gap-24">
           <!-- <div class="absolute Z-[3] -left-1/2 top-0 w-1/2 h-1/2 rounded-full white__gradient"></div> -->
@@ -128,12 +129,14 @@
     </section>
   
     <!-- End Jumbotron -->
+
+    
   
     <!-- About -->
 
   
   
-    <section class="bg-[#090f14]">
+    <section class="bg-[#090f14] overscroll-contain overscroll-y-contain">
       <div class="text-white" id="about" style="font-family: Fredoka,sans-serif">
   
         <h1 class=" text-center mb-5 text-6xl">About Me</h1>
@@ -156,7 +159,7 @@
     
     <!-- Projects -->
     
-    <section class="projects">
+    <section class="projects overscroll-contain overscroll-y-contain">
       <!-- Wave -->
         <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 400" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150 ">
           <path d="M 0,400 C 0,400 0,200 0,200 C 73.25384615384615,198.63846153846154 146.5076923076923,197.27692307692308 218,184 C 289.4923076923077,170.72307692307692 359.22307692307686,145.5307692307692 438,162 C 516.7769230769231,178.4692307692308 604.6,236.60000000000002 689,237 C 773.4,237.39999999999998 854.3769230769233,180.06923076923078 946,176 C 1037.6230769230767,171.93076923076922 1139.8923076923077,221.12307692307692 1224,234 C 1308.1076923076923,246.87692307692308 1374.0538461538463,223.43846153846152 1440,200 C 1440,200 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="#090f14" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 200)">
@@ -194,7 +197,7 @@
   
     <!-- Contact -->
   
-    <section class="bg-[#090f14]" id="contact">
+    <section class="bg-[#090f14] overscroll-contain overscroll-y-contain" id="contact">
       <div class="tag text-white">
         <h1 class="text-center font-montserrat font-semibold text-5xl mb-16">Contact Me</h1>
         <div class="flex justify-evenly items-center">
@@ -225,7 +228,7 @@
   </section>
   
     <!-- End Footer -->
-    <script
+    <!-- <script
       src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.js"
       integrity="sha512-qk0XupXlge1h9I63+bC7K8850xgWnUjTgSNkfLnsqc7dWdx4031UbKjKs2cuRxsNXymkSjyzSCiryVouU74zkg=="
       crossorigin="anonymous"
@@ -233,7 +236,7 @@
     ></script>
     <script>
       let rellax = new Rellax('.rellax');
-    </script>
+    </script> -->
     <script src="https://kit.fontawesome.com/221c7d326d.js" crossorigin="anonymous"></script>
     <script src="index.js"></script>
   </body>
