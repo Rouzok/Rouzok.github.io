@@ -8,7 +8,7 @@
     </title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/index.css">
   </head>
@@ -16,12 +16,12 @@
    
     <!-- Navbar -->
   
-    <nav class="px-20 py-5 fixed top-0 w-full duration-300 z-10 flex justify-center" id="Navbar">
+    <nav class="px-20 fixed top-0 h-0 w-full z-10 duration-300 flex justify-center bg-gradient-to-b from-gray-900/80 to-transparent" id="Navbar">
       <!-- <p class="text-white left-1/2" id="demo"></p> -->
       <span class="opacity-0">Navbar</span>
     </nav>
 
-      <p class="text-white text-xl font-montserrat font-semibold fixed left-20 top-[18px] z-[25]">Rouzok</p>
+      <p class="text-white text-xl font-semibold fixed left-20 top-[18px] z-[25] tracking-widest">Rouzok</p>
       <a class="hover:cursor-pointer duration-300 hover:opacity-60 rounded-full flex gap-2 justify-center items-center group fixed right-20 top-[18px] z-[25]"  onclick="viewMenu()">
         <span class="text-white font-montserrat text-xs tracking-widest font-semibold" id="menuText">MENU</span>
         <button id="indexMenu" class="duration-300">
@@ -48,7 +48,7 @@
       
     </nav>
 
-    <button class="fixed text-white font-semibold bottom-10 right-10 rounded-full p-3 bg-gray-800 z-10 duration-300 fadeFromTop" onclick="home()" id="buttonToTop">
+    <button class="fixed text-white font-semibold bottom-10 right-10 rounded-full p-3 bg-gray-800 duration-700 -translate-y-10 fadeFromTop" onclick="home()" id="buttonToTop">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18" />
       </svg>
@@ -64,10 +64,10 @@
           <!-- <div class="absolute Z-[0] -left-1/2 top-0 w-1/2 h-1/2 rounded-full blue__gradient"></div> -->
           <div class="font-montserrat flex flex-col text-white justify-center gap-3 w-7/12">
             <div class="flex flex-col mb-1">
-              <h5 class="text-7xl uppercase ">akhmad alvan hani</h5>
-              <h1 class="text-lg font-semibold text-white/70">Fullstack web developer</h1>
+              <h5 class="text-7xl font-semibold">Akhmad Alvan Hani</h5>
+              <h1 class="text-lg font-semibold text-white/70 tracking-wide">Fullstack Web Developer</h1>
             </div>
-            <h3 class="text-2xl text-white/70 leading-8 font-semibold w-11/12">A full-stack web developer with 15 years of age and one year of experience, I've worked on many projects with several programming languages ​​and frameworks.</h3>
+            <h3 class="text-2xl text-white/70 leading-8 tracking-wide font-semibold w-11/12" >A full-stack web developer with 15 years of age and one year of experience, I've worked on many projects with several programming languages ​​and frameworks.</h3>
             <button class="flex items-center group gap-2 self-start border-2 border-transparent rounded-lg px-2 py-2 text-white/70 cursor-pointer hover:bg-white/20 hover:text-white hover:border-white/5 duration-300 transition-colors" onclick="projects()">
               <span class="font-semibold">My Projects</span>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-6 group-hover:translate-x-1.5 duration-300 transition-transform">
@@ -136,8 +136,8 @@
 
   
   
-    <section class="bg-[#090f14] overscroll-contain overscroll-y-contain">
-      <div class="text-white" id="about" style="font-family: Fredoka,sans-serif">
+    <section class="bg-[#090f14] overscroll-contain overscroll-y-contain" >
+      <div class="text-white" id="about" style="font-family: Fredoka,sans-serif" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-easing="ease-out-cubic">
   
         <h1 class=" text-center mb-5 text-6xl">About Me</h1>
         <div class="flex justify-center mx-">
@@ -167,12 +167,12 @@
         </svg>
       <!-- Wave -->
       
-      <div class=" tag -mt-16" id="projects">
+      <div class=" tag -mt-16" id="projects" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100" data-aos-easing="ease-out-cubic">
           <h1 class=" text-6xl text-center text-white mb-16">My Projects</h1>
 
         <div class="flex justify-center items-center gap-10">
           <!-- project 1 -->
-          <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30 w-[30rem] h-[30rem]  rounded-md">
+          <div class="group relative items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30 w-[30rem] h-[30rem]  rounded-md">
             <div class="h-full w-full group-hover:scale-110 duration-300">
               <img class="h-fit w-fit object-cover transition-transform duration-500 " src="assets/images/project1.png" alt="" />
               <img class="h-fit w-fit object-cover transition-transform duration-500" src="assets/images/project1.png" alt="" />
@@ -181,7 +181,7 @@
             <div class="absolute inset-0 flex translate-y-[50%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
               <h1 class="font-dmserif text-xl font-bold text-white">Inventaris Barang</h1>
               <p class="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.</p>
-              <button class="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">See More</button>
+              <button class="rounded-lg px-2 py-2 text-white/70 cursor-pointer hover:bg-gray-800/40 bg-white/20 hover:text-white hover:border-white/5 duration-300 transition-colors text-sm capitalize text-white hover:shadow hover:shadow-black/60">See More</button>
             </div>
           </div>
           <!-- end project 1 -->
@@ -237,7 +237,11 @@
     <script>
       let rellax = new Rellax('.rellax');
     </script> -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://kit.fontawesome.com/221c7d326d.js" crossorigin="anonymous"></script>
     <script src="index.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

@@ -38,13 +38,16 @@ svg path.transition-transform {
 
 .fadeFromTop {
   opacity: 0;
-  transform: translateY(-25%);
+  z-index: -10;
 }
 
 .fadeFromTop.visible {
   opacity: 40%;
+  z-index: 20;
   transform: translateY(0);
   animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  animation: BounceUp 2s 1;
+  animation-delay: 15s;
 }
 
 .fadeFromTop.visible:hover {
@@ -70,16 +73,29 @@ svg path.transition-transform {
   100% {
   }
 }
+@keyframes BounceUp {
+  0%,
+  50%,
+  100% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(-15%);
+  }
+
+  75% {
+    transform: translateY(-10%);
+  }
+}
 
 @keyframes mouseWheel {
-  0% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
     transform: translateY(13%);
-  }
-  100% {
-    transform: translateY(0);
   }
 }
 

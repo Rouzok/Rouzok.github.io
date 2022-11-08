@@ -2,20 +2,9 @@
 
 window.onload = function () {
   const navbar = document.getElementById('Navbar');
-  // const btnhome = document.getElementById('btn-home');
-  // const btnabout = document.getElementById('btn-about');
-  // const btnproject = document.getElementById('btn-projects');
-  // const btncontact = document.getElementById('btn-contact');
   var top = document.body.scrollTop;
   var elementop = document.documentElement.scrollTop;
   var about = document.getElementById('about');
-
-  if (top == 0 && elementop == 0) {
-    about.classList.remove('transition');
-    about.classList.add('tag');
-  }
-
-  // test
 
   if (elementop > 0) {
     navbar.classList.add('bg-gray-900/80');
@@ -24,42 +13,8 @@ window.onload = function () {
     navbar.classList.remove('bg-gray-900/80');
     navbar.classList.remove('shadow');
   }
-
-  // //home
-  // if (elementop <= 200) {
-  //   if (!btnhome.classList.contains('active')) {
-  //     btnhome.classList.add('active');
-  //   }
-  // } else {
-  //   btnhome.classList.remove('active');
-  // }
-
-  // //about
-  // if (elementop <= 750 && !btnhome.classList.contains('active')) {
-  //   btnabout.classList.add('active');
-  // } else {
-  //   btnabout.classList.remove('active');
-  // }
-
-  // //project
-  // if (elementop <= 1700 && !btnabout.classList.contains('active')) {
-  //   if (!btnhome.classList.contains('active')) {
-  //     btnproject.classList.add('active');
-  //   }
-  // } else {
-  //   btnproject.classList.remove('active');
-  // }
-
-  // //contact
-  // if (elementop <= 2200 && !btnproject.classList.contains('active')) {
-  //   if (!btnabout.classList.contains('active') && !btnhome.classList.contains('active')) {
-  //     btncontact.classList.add('active');
-  //   }
-  // } else {
-  //   btncontact.classList.remove('active');
-  // }
-
-  // test
+  handleScroll();
+  navActive();
 };
 
 window.onscroll = function () {
@@ -82,13 +37,24 @@ function navActive() {
   const contactTop = document.getElementById('contact').offsetTop;
 
   if (elementop > homeTop) {
+    navbar.classList.remove('bg-gradient-to-b');
+    navbar.classList.remove('from-gray-900/80');
+    navbar.classList.remove('to-transparent');
+    navbar.classList.remove('h-0');
+
+    navbar.classList.add('h-[64px]');
     navbar.classList.add('bg-gray-900/80');
     navbar.classList.add('backdrop-blur-sm');
     navbar.classList.add('shadow');
   } else {
+    navbar.classList.remove('h-[64px]');
     navbar.classList.remove('bg-gray-900/80');
     navbar.classList.remove('backdrop-blur-sm');
     navbar.classList.remove('shadow');
+    navbar.classList.add('h-0');
+    navbar.classList.add('bg-gradient-to-b');
+    navbar.classList.add('from-gray-900/80');
+    navbar.classList.add('to-transparent');
   }
 
   //home
