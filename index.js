@@ -2,19 +2,17 @@
 
 window.onload = function () {
   const navbar = document.getElementById('Navbar');
-  var top = document.body.scrollTop;
-  var elementop = document.documentElement.scrollTop;
-  var about = document.getElementById('about');
+  const elemenTop = document.documentElement.scrollTop;
 
-  if (elementop > 0) {
+  if (elemenTop > 0) {
     navbar.classList.add('bg-gray-900/80');
     navbar.classList.add('shadow');
   } else {
     navbar.classList.remove('bg-gray-900/80');
     navbar.classList.remove('shadow');
   }
-  handleScroll();
   navActive();
+  handleScroll();
 };
 
 window.onscroll = function () {
@@ -23,11 +21,11 @@ window.onscroll = function () {
 };
 
 function navActive() {
-  const navbar = document.getElementById('Navbar');
-  const btnhome = document.getElementById('btn-home');
-  const btnabout = document.getElementById('btn-about');
-  const btnproject = document.getElementById('btn-projects');
-  const btncontact = document.getElementById('btn-contact');
+  const Navbar = document.getElementById('Navbar');
+  const btnHome = document.getElementById('btn-home');
+  const btnAbout = document.getElementById('btn-about');
+  const btnProject = document.getElementById('btn-projects');
+  const btnContact = document.getElementById('btn-contact');
   const arrowMenu = document.getElementById('arrowMenu');
 
   const elementop = document.documentElement.scrollTop;
@@ -36,83 +34,87 @@ function navActive() {
   const projectsTop = document.getElementById('projects').offsetTop;
   const contactTop = document.getElementById('contact').offsetTop;
 
-  if (elementop > homeTop) {
-    navbar.classList.remove('bg-gradient-to-b');
-    navbar.classList.remove('from-gray-900/80');
-    navbar.classList.remove('to-transparent');
-    navbar.classList.remove('h-0');
+  const btnHomeTop = btnHome.offsetTop;
+  const btnAboutTop = btnAbout.offsetTop;
+  const btnProjectTop = btnProject.offsetTop;
+  const btnContactTop = btnContact.offsetTop;
 
-    navbar.classList.add('h-[64px]');
-    navbar.classList.add('bg-gray-900/80');
-    navbar.classList.add('backdrop-blur-sm');
-    navbar.classList.add('shadow');
+  const btnHomeCenter = btnHomeTop + 6;
+  const btnAboutCenter = btnAboutTop + 6;
+  const btnProjectCenter = btnProjectTop + 6;
+  const btnContactCenter = btnContactTop + 6;
+
+  if (elementop > homeTop) {
+    Navbar.classList.remove('bg-gradient-to-b');
+    Navbar.classList.remove('from-gray-900/80');
+    Navbar.classList.remove('to-transparent');
+    Navbar.classList.remove('h-0');
+
+    Navbar.classList.add('h-[64px]');
+    Navbar.classList.add('bg-gray-900/80');
+    Navbar.classList.add('backdrop-blur-sm');
+    Navbar.classList.add('shadow');
   } else {
-    navbar.classList.remove('h-[64px]');
-    navbar.classList.remove('bg-gray-900/80');
-    navbar.classList.remove('backdrop-blur-sm');
-    navbar.classList.remove('shadow');
-    navbar.classList.add('h-0');
-    navbar.classList.add('bg-gradient-to-b');
-    navbar.classList.add('from-gray-900/80');
-    navbar.classList.add('to-transparent');
+    Navbar.classList.remove('h-[64px]');
+    Navbar.classList.remove('bg-gray-900/80');
+    Navbar.classList.remove('backdrop-blur-sm');
+    Navbar.classList.remove('shadow');
+    Navbar.classList.add('h-0');
+    Navbar.classList.add('bg-gradient-to-b');
+    Navbar.classList.add('from-gray-900/80');
+    Navbar.classList.add('to-transparent');
   }
 
   //home
   if (elementop <= aboutTop - 200) {
-    if (!btnhome.classList.contains('text-white')) {
-      btnhome.classList.remove('text-white/60');
-      btnhome.classList.add('text-white');
+    if (!btnHome.classList.contains('text-white')) {
+      btnHome.classList.remove('text-white/60');
+      btnHome.classList.add('text-white');
     }
-    if (!arrowMenu.classList.contains('top-[16.35rem]')) {
-      arrowMenu.classList.add('top-[16.35rem]');
-    }
+    arrowMenu.style.top = `${btnHomeCenter}px`;
   } else {
-    btnhome.classList.remove('text-white');
-    btnhome.classList.add('text-white/60');
-    arrowMenu.classList.remove('top-[16.35rem]');
+    btnHome.classList.remove('text-white');
+    btnHome.classList.add('text-white/60');
   }
 
   //about
-  if (elementop <= projectsTop - 250 && !btnhome.classList.contains('text-white')) {
-    btnabout.classList.remove('text-white/60');
-    btnabout.classList.add('text-white');
-    if (!arrowMenu.classList.contains('top-[20.6rem]')) {
-      arrowMenu.classList.add('top-[20.6rem]');
+  if (elementop <= projectsTop - 250 && !btnHome.classList.contains('text-white')) {
+    btnAbout.classList.remove('text-white/60');
+    btnAbout.classList.add('text-white');
+    if (arrowMenu.getAttribute('style') != `top-${btnAboutCenter}px`) {
+      arrowMenu.style.top = `${btnAboutCenter}px`;
     }
   } else {
-    btnabout.classList.remove('text-white');
-    btnabout.classList.add('text-white/60');
-    arrowMenu.classList.remove('top-[20.6rem]');
+    btnAbout.classList.remove('text-white');
+    btnAbout.classList.add('text-white/60');
   }
 
   //project
-  if (elementop <= contactTop - 400 && !btnabout.classList.contains('text-white')) {
-    if (!btnhome.classList.contains('text-white')) {
-      btnproject.classList.remove('text-white/60');
-      btnproject.classList.add('text-white');
+  if (elementop <= contactTop - 400 && !btnAbout.classList.contains('text-white')) {
+    if (!btnHome.classList.contains('text-white')) {
+      btnProject.classList.remove('text-white/60');
+      btnProject.classList.add('text-white');
     }
-    if (!arrowMenu.classList.contains('top-[24.85rem]') && !arrowMenu.classList.contains('top-[16.35rem]')) {
-      arrowMenu.classList.add('top-[24.85rem]');
+    if (arrowMenu.getAttribute('style') != `top-${btnHomeCenter}px` && elementop >= aboutTop - 200) {
+      arrowMenu.style.top = `${btnProjectCenter}px`;
     }
   } else {
-    btnproject.classList.remove('text-white');
-    btnproject.classList.add('text-white/60');
-    arrowMenu.classList.remove('top-[24.85rem]');
+    btnProject.classList.remove('text-white');
+    btnProject.classList.add('text-white/60');
   }
 
   //contact
-  if (elementop >= contactTop - 400 && !btnproject.classList.contains('text-white')) {
-    if (!btnabout.classList.contains('text-white') && !btnhome.classList.contains('text-white')) {
-      btncontact.classList.remove('text-white/60');
-      btncontact.classList.add('text-white');
+  if (elementop >= contactTop - 400 && !btnProject.classList.contains('text-white')) {
+    if (!btnAbout.classList.contains('text-white') && !btnHome.classList.contains('text-white')) {
+      btnContact.classList.remove('text-white/60');
+      btnContact.classList.add('text-white');
     }
-    if (!arrowMenu.classList.contains('top-[24.85rem]') && !arrowMenu.classList.contains('top-[24.85rem]')) {
-      arrowMenu.classList.add('top-[29.1rem]');
+    if (arrowMenu.getAttribute('style') != `top-${btnHomeCenter}px` && arrowMenu.getAttribute('style') != `top-${btnAboutCenter}px` && arrowMenu.getAttribute('style') != `top-${btnProjectCenter}px`) {
+      arrowMenu.style.top = `${btnContactCenter}px`;
     }
   } else {
-    btncontact.classList.remove('text-white');
-    btncontact.classList.add('text-white/60');
-    arrowMenu.classList.remove('top-[29.1rem]');
+    btnContact.classList.remove('text-white');
+    btnContact.classList.add('text-white/60');
   }
 }
 
