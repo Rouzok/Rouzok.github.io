@@ -159,7 +159,7 @@
     
     <!-- Projects -->
     
-    <section class="projects overscroll-contain overscroll-y-contain">
+    <section class="projects">
       <!-- Wave -->
         <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 400" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150 ">
           <path d="M 0,400 C 0,400 0,200 0,200 C 73.25384615384615,198.63846153846154 146.5076923076923,197.27692307692308 218,184 C 289.4923076923077,170.72307692307692 359.22307692307686,145.5307692307692 438,162 C 516.7769230769231,178.4692307692308 604.6,236.60000000000002 689,237 C 773.4,237.39999999999998 854.3769230769233,180.06923076923078 946,176 C 1037.6230769230767,171.93076923076922 1139.8923076923077,221.12307692307692 1224,234 C 1308.1076923076923,246.87692307692308 1374.0538461538463,223.43846153846152 1440,200 C 1440,200 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="#090f14" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 200)">
@@ -167,12 +167,11 @@
         </svg>
       <!-- Wave -->
       
-      <div class=" tag -mt-16" id="projects" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100" data-aos-easing="ease-out-cubic">
+      <div class="-mt-16" id="projects">
           <h1 class=" text-6xl text-center text-white mb-16">My Projects</h1>
-
-        <div class="flex justify-center items-center gap-10">
+        <div class="flex justify-center items-center gap-10 h-96 relative" id="projects_wrapper">
           <!-- project 1 -->
-          <div class="group relative items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30 w-[30rem] h-[30rem]  rounded-md">
+          <!-- <div class="group relative items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30 w-[30rem] h-[30rem]  rounded-md">
             <div class="h-full w-full group-hover:scale-110 duration-300">
               <img class="h-fit w-fit object-cover transition-transform duration-500 " src="assets/images/project1.png" alt="" />
               <img class="h-fit w-fit object-cover transition-transform duration-500" src="assets/images/project1.png" alt="" />
@@ -183,8 +182,45 @@
               <p class="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.</p>
               <button class="rounded-lg px-2 py-2 text-white/70 cursor-pointer hover:bg-gray-800/40 bg-white/20 hover:text-white hover:border-white/5 duration-300 transition-colors text-sm capitalize text-white hover:shadow hover:shadow-black/60">See More</button>
             </div>
-          </div>
+          </div> -->
           <!-- end project 1 -->
+
+          <!-- Alpha 0.2 -->
+
+          <div class="group absolute left-64 top-32 overflow-hidden duration-300 hover:shadow-xl hover:shadow-black/30 w-[20rem] h-[20rem] rounded-md" id="div1">
+            <div class="absolute h-full w-full group-hover:scale-110 duration-300 flex justify-center items-center">
+              <img class="h-max object-cover duration-300 aspect-video" src="assets/images/project1.png" alt="" />
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70 duration-500"></div>
+            <div class="absolute inset-0 flex translate-y-1/2 flex-col gap-2 items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
+              <h1 class="font-dmserif text-xl font-bold text-white">Inventaris</h1>
+              <button
+                class="text-white/40 cursor-pointer duration-300 transition-colors capitalize hover:text-white text-xl font-medium"
+                onclick="item1(0)"
+              >
+                See More
+              </button>
+            </div>
+            <div class="w-1/2 fixed flex flex-col items-center gap-10 justify-center -z-10 top-[22%] right-16">
+              <div class="text-white text-5xl duration-200 font-semibold fadeUp ease-in-out">Inventaris</div>
+              <div class="text-white text-2xl duration-200 font-semibold fadeUp ease-in-out delay-[50ms]">
+                Inventaris is a PHP Native-based item storage system that functions to store and manage goods, using SQL for database and Bootstrap for CSS.
+              </div>
+              <div class="flex self-start gap-2 fadeUp text-white duration-200 text-sm cursor-default">
+                <div class="px-3 bg-gray-800 rounded-full duration-200 fadeUp">PHP</div>
+                <div class="px-3 bg-gray-800 rounded-full duration-200 fadeUp delay-100">HTML</div>
+                <div class="px-3 bg-gray-800 rounded-full duration-200 fadeUp delay-[125ms]">CSS</div>
+                <div class="px-3 bg-gray-800 rounded-full duration-200 fadeUp delay-[125ms]">JavaScript</div>
+              </div>
+              <button
+                class="self-start fadeUp rounded-full px-4 py-2 text-white/70 cursor-pointer hover:bg-gray-800 bg-gray-900/95 hover:text-white hover:border-white/5 duration-200 text-sm capitalize text-white hover:shadow hover:shadow-black/60 delay-[125ms]"
+              >
+                Source Code
+              </button>
+            </div>
+          </div>
+
+          <!-- Alpha 0.2 -->
 
       </div>
   

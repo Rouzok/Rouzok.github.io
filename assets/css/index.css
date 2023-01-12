@@ -1,5 +1,7 @@
 body {
   scroll-behavior: smooth;
+  margin: 0px;
+  padding: 0px;
 }
 :root {
   --reverse-main-bg: radial-gradient(ellipse at top, #1b2735 0%, #090a0f 100%);
@@ -51,6 +53,17 @@ svg path.transition-transform {
 }
 
 .fadeFromTop.visible:hover {
+  opacity: 100%;
+}
+
+.fadeUp {
+  opacity: 0;
+  z-index: -10;
+  transform: translateY(40%);
+}
+.fadeUp.visible {
+  z-index: 0;
+  transform: translateY(0);
   opacity: 100%;
 }
 

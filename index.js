@@ -237,3 +237,87 @@ function viewMenu() {
     closeMenu();
   };
 }
+
+// test
+
+const div = [document.getElementById('div1'), document.getElementById('div2')];
+let cardX, cardXOpen;
+function item1(x) {
+  document.body.classList.toggle('overflow-hidden');
+  switch (x) {
+    case 0:
+      cardX = 'left-64';
+      cardXOpen = 'left-0';
+      break;
+    case 1:
+      cardX = 'right-64';
+      cardXOpen = 'right-0';
+      break;
+  }
+
+  div[x].classList.toggle('z-50');
+  div[x].classList.toggle('absolute');
+  div[x].classList.toggle('fixed');
+  div[x].classList.toggle('rounded-md');
+  div[x].classList.toggle('w-[20rem]');
+  div[x].classList.toggle('h-[20rem]');
+  div[x].classList.toggle(`${cardX}`);
+  div[x].classList.toggle('top-32');
+  div[x].children[1].classList.toggle('-z-10');
+  div[x].children[1].classList.toggle('from-transparent');
+  div[x].children[1].classList.toggle('via-transparent');
+  div[x].children[1].classList.toggle('to-black');
+  div[x].children[1].classList.toggle('group-hover:from-black/70');
+  div[x].children[1].classList.toggle('group-hover:via-black/60');
+  div[x].children[1].classList.toggle('group-hover:to-black/70');
+  div[x].children[1].classList.toggle('from-gray-900');
+  div[x].children[1].classList.toggle('via-gray-900');
+  div[x].children[1].classList.toggle('to-black');
+
+  div[x].classList.toggle('h-full');
+  div[x].classList.toggle('w-full');
+  div[x].classList.toggle(`${cardXOpen}`);
+  div[x].classList.toggle('top-0');
+
+  div[x].children[2].classList.toggle('hidden');
+
+  div[x].children[0].classList.toggle('scale-35');
+  div[x].children[0].classList.toggle('-translate-x-[24rem]');
+  div[x].children[0].classList.toggle('group-hover:scale-110');
+
+  div[x].children[2].classList.toggle('translate-y-1/2');
+  div[x].children[2].classList.toggle('group-hover:translate-y-0');
+  div[x].children[2].classList.toggle('translate-y-0');
+  div[x].children[2].children[1].classList.toggle('group-hover:opacity-100');
+  div[x].children[2].children[1].classList.toggle('opacity-100');
+
+  if (div[x].classList.contains('z-50')) {
+    setTimeout(function () {
+      div[x].children[3].classList.toggle('-z-10');
+      div[x].children[3].classList.add('visible');
+      for (let i = 0; i <= 3; i++) {
+        div[x].children[3].children[i].classList.add('visible');
+        if (i == 2) {
+          for (let p = 0; p <= 3; p++) {
+            div[x].children[3].children[i].children[p].classList.add('visible');
+          }
+        }
+      }
+    }, 100);
+    setTimeout(function () {
+      div[x].setAttribute('onclick', `item1(${x})`);
+    }, 300);
+  } else {
+    div[x].children[3].classList.toggle('-z-10');
+    div[x].children[3].classList.remove('visible');
+    for (let i = 0; i <= 3; i++) {
+      div[x].children[3].children[i].classList.remove('visible');
+      if (i == 2) {
+        for (let l = 0; l <= 3; l++) {
+          div[x].children[3].children[i].children[l].classList.remove('visible');
+        }
+      }
+    }
+    div[x].removeAttribute('onclick', `item1(${x})`);
+  }
+}

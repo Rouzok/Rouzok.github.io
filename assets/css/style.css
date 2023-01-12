@@ -618,20 +618,32 @@ video {
   bottom: 25%;
 }
 
-.top-\[16\.35rem\]{
-  top: 16.35rem;
+.left-64{
+  left: 16rem;
 }
 
-.top-\[20\.6rem\]{
-  top: 20.6rem;
+.top-32{
+  top: 8rem;
 }
 
-.top-\[24\.85rem\]{
-  top: 24.85rem;
+.top-\[22\%\]{
+  top: 22%;
 }
 
-.top-\[29\.1rem\]{
-  top: 29.1rem;
+.right-16{
+  right: 4rem;
+}
+
+.left-0{
+  left: 0px;
+}
+
+.right-64{
+  right: 16rem;
+}
+
+.right-0{
+  right: 0px;
 }
 
 .z-10{
@@ -648,6 +660,10 @@ video {
 
 .z-20{
   z-index: 20;
+}
+
+.z-50{
+  z-index: 50;
 }
 
 .my-1\.5{
@@ -697,6 +713,14 @@ video {
   display: grid;
 }
 
+.hidden{
+  display: none;
+}
+
+.aspect-video{
+  aspect-ratio: 16 / 9;
+}
+
 .h-0{
   height: 0px;
 }
@@ -707,10 +731,6 @@ video {
 
 .h-\[0\.15rem\]{
   height: 0.15rem;
-}
-
-.h-full{
-  height: 100%;
 }
 
 .h-9{
@@ -733,8 +753,16 @@ video {
   height: 2.5rem;
 }
 
+.h-96{
+  height: 24rem;
+}
+
 .h-\[30rem\]{
   height: 30rem;
+}
+
+.h-full{
+  height: 100%;
 }
 
 .h-fit{
@@ -743,12 +771,18 @@ video {
   height: fit-content;
 }
 
-.h-\[64px\]{
-  height: 64px;
+.h-\[20rem\]{
+  height: 20rem;
 }
 
-.h-96{
-  height: 24rem;
+.h-max{
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.h-\[64px\]{
+  height: 64px;
 }
 
 .w-full{
@@ -797,6 +831,10 @@ video {
   width: fit-content;
 }
 
+.w-\[20rem\]{
+  width: 20rem;
+}
+
 .w-7{
   width: 1.75rem;
 }
@@ -816,6 +854,11 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.translate-y-2\/3{
+  --tw-translate-y: 66.666667%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .translate-y-\[0\.55rem\]{
   --tw-translate-y: 0.55rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -831,6 +874,21 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.-translate-x-\[24rem\]{
+  --tw-translate-x: -24rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-1\/2{
+  --tw-translate-y: 50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-0{
+  --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .rotate-45{
   --tw-rotate: 45deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -841,12 +899,22 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.scale-35{
+  --tw-scale-x: .35;
+  --tw-scale-y: .35;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .transform{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .cursor-pointer{
   cursor: pointer;
+}
+
+.cursor-default{
+  cursor: default;
 }
 
 .grid-cols-2{
@@ -957,6 +1025,10 @@ video {
   background-color: rgb(255 255 255 / 0.2);
 }
 
+.bg-gray-900\/95{
+  background-color: rgb(17 24 39 / 0.95);
+}
+
 .bg-gray-900\/80{
   background-color: rgb(17 24 39 / 0.8);
 }
@@ -981,9 +1053,26 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-black\/30{
+  --tw-gradient-from: rgb(0 0 0 / 0.3);
+  --tw-gradient-to: rgb(0 0 0 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-gray-900{
+  --tw-gradient-from: #111827;
+  --tw-gradient-to: rgb(17 24 39 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .via-transparent{
   --tw-gradient-to: rgb(0 0 0 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), transparent, var(--tw-gradient-to);
+}
+
+.via-gray-900{
+  --tw-gradient-to: rgb(17 24 39 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), #111827, var(--tw-gradient-to);
 }
 
 .to-transparent{
@@ -1025,6 +1114,16 @@ video {
 .px-9{
   padding-left: 2.25rem;
   padding-right: 2.25rem;
+}
+
+.px-3{
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .py-1{
@@ -1110,6 +1209,10 @@ video {
   font-weight: 700;
 }
 
+.font-medium{
+  font-weight: 500;
+}
+
 .capitalize{
   text-transform: capitalize;
 }
@@ -1143,8 +1246,16 @@ video {
   color: rgb(255 255 255 / 0.7);
 }
 
+.text-white\/40{
+  color: rgb(255 255 255 / 0.4);
+}
+
 .opacity-0{
   opacity: 0;
+}
+
+.opacity-100{
+  opacity: 1;
 }
 
 .shadow{
@@ -1207,6 +1318,18 @@ video {
   transition-delay: 150ms;
 }
 
+.delay-\[50ms\]{
+  transition-delay: 50ms;
+}
+
+.delay-100{
+  transition-delay: 100ms;
+}
+
+.delay-\[125ms\]{
+  transition-delay: 125ms;
+}
+
 .duration-300{
   transition-duration: 300ms;
 }
@@ -1241,6 +1364,11 @@ video {
 
 .hover\:bg-gray-800\/40:hover{
   background-color: rgb(31 41 55 / 0.4);
+}
+
+.hover\:bg-gray-800:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 }
 
 .hover\:text-white\/90:hover{
